@@ -1,0 +1,10 @@
+{
+  "name": "leetcode-challenges",
+  "devDependencies": {
+    "tsx": "latest",
+    "typescript": "latest"
+  },
+  "scripts": {
+    "solve": "tsx"
+  }
+}
