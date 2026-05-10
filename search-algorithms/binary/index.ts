@@ -24,3 +24,5 @@ function binarySearch(nums: Array<number>, target: number): number {
 console.log(binarySearch([1,2,3,4,5,6,7,8], 6));
 console.log(binarySearch([3,5,6,7,9,16,17,28], 28));
 console.log(binarySearch([3,5,6,7,9,16,17,28], 4));
+
+// O(log n)
