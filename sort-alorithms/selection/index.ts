@@ -1,23 +1,19 @@
 function sortArray(nums: number[]): number[] {
-    let orderedNums: number[] = []
     let numsLength = nums.length
     
-    for (let i = 0; i < numsLength; i++) {
-        let smallestNum = nums[0];
-        let smallestIndex = 0;
+    for (let i = 0; i < numsLength - 1; i++) {
+        let smallestIndex = i;
 
-        for (let j = 1; j < nums.length; j++) {
-            if (nums[j] < smallestNum) {
-                smallestNum = nums[j];
+        for (let j = i + 1; j < numsLength; j++) {
+            if (nums[j] < nums[smallestIndex]) {
                 smallestIndex = j;
             }
         }
 
-        orderedNums.push(smallestNum);
-        nums.splice(smallestIndex, 1);
+        [nums[i], nums[smallestIndex]] = [nums[smallestIndex], nums[i]];
     }
  
-    return orderedNums;
+    return nums;
 };
 
 console.log(sortArray([5,2,3,1])); // Expected output: [1,2,3,5]
