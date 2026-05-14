@@ -1,4 +1,4 @@
-function sortArray(nums: number[]): number[] {
+function selectionSort(nums: number[]): number[] {
     let numsLength = nums.length
     
     for (let i = 0; i < numsLength - 1; i++) {
@@ -16,7 +16,7 @@ function sortArray(nums: number[]): number[] {
     return nums;
 };
 
-console.log(sortArray([5,2,3,1])); // Expected output: [1,2,3,5]
-console.log(sortArray([5,1,1,2,0,0])); // Expected output: [0,0,1,1,2,5]
+console.log(selectionSort([5,2,3,1])); // Expected output: [1,2,3,5]
+console.log(selectionSort([5,1,1,2,0,0])); // Expected output: [0,0,1,1,2,5]
 
 // O(n^2)
